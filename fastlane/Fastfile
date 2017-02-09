@@ -108,44 +108,7 @@ private_lane :build do |options|
 	puts '-----------------------------------'
 	puts '--- G Y M  -  I P A  &  D S Y M ---'
 	puts '-----------------------------------'
-
-
-
-        puts '-----------------------------------'
-	puts '---- R E L E A S E   N O T E S ----'
-	puts '-----------------------------------'	
-	puts 'autogenerate release notes from git commits'
-       #tag_name = `git describe --tags --abbrev=0`
-       tag_name = ‘git log -1 --pretty=%B’
-	#tag_name.delete!("\n")
-	release_notes = changelog_from_git_commits(
-		include_merges: false,
-               #between: [tag_name, 'HEAD'],
-		pretty: '**%h:** %s<br/>',
-	)
-	#puts 'release_notes=' + release_notes
-
-        
 	
-	puts '-----------------------------------'
-	puts '----------- H O C K E Y -----------'
-	puts '-----------------------------------'	
-
-	if HOCKEY_API_TOKEN== '' 
-   		puts "api token is empty, skip hockey"
-	else
-   		puts "push to hockey"
-   		markdown_type = '1'
-		hockey(
-			api_token: HOCKEY_API_TOKEN,
-    		
-    		#notes_type: markdown_type,
-  
-    		#notify: HOCKEY_NOTIFY, # Notify all testers that can install this app
-    		#status: HOCKEY_STATUS, # Available for download or installation
-       		build_server_url: BUILD_SERVER_URL,#optional, set to the URL of the build job on your build server
-  		)
-	end	
 
        puts '-----------------------------------'
 	puts '----------- Crashlytics -----------'
