@@ -113,7 +113,7 @@ private_lane :build do |options|
 	    scheme: XCODE_SCHEME,
 	    # both of these flags are required for ad hoc
 	    export_method: 'enterprise',
-	    use_legacy_build_api: true,
+	    #use_legacy_build_api: true,
 	    sdk: "iphoneos",
 		clean: true,
 		include_bitcode: false,
