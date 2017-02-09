@@ -78,8 +78,8 @@ private_lane :build do |options|
     
     puts 'XCODE_PROVISIONING_PROFILE_PATH=' + XCODE_PROVISIONING_PROFILE_PATH
 	puts '-----------------------------------'
-	VERSION_NUMBER =  get_version_number()
-	BUILD_NUMBER = number_of_commits
+	VERSION_NUMBER =  2
+	BUILD_NUMBER = 2
 	XCODE_IPA_NAME = IPA_PREFIX + '_'	+ XCODE_SCHEME + '_' + VERSION_NUMBER.to_s + '_' + BUILD_NUMBER.to_s
 
 	HOCKEY_API_TOKEN = get_info_plist_value(path: PLIST_PATH, key: 'HOCKEY_API_TOKEN')
