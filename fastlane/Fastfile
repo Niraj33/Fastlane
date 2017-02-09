@@ -1,33 +1,10 @@
+# Define the minimal Fastlane version
+fastlane_version "1.41.1"
+
+# Use the iOS platform as default
 default_platform :ios
 
-
+# Define what to do for the iOS platform
 platform :ios do
-
-  before_all do
-    #cocoapods
-    #increment_build_number
-    gym(scheme: “FastFedEx”)
-
-   hockey(
-      api_token: “d89f76b741df4c29be03e8700ca333f8”,
-      #public_identifier: HOCKEY_APP_ID,
-      notes: "Changelog",
-      notify: '0',
-      #notes:git_branch + ' (Uploaded via fastlane).'
-    )
-  end
-
-  desc "Runs all the tests"
-  lane :test do
-    scan(device: "iPhone 6s")
-  end
-
-  after_all do |lane|
-
-  end
-
-  error do |lane, exception|
-    say "error in lane! "
-  end
 
 end
