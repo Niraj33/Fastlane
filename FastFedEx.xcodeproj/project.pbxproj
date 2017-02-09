@@ -1,0 +1,488 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FAFD3DCC1E44C66C00A0CF54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFD3DCB1E44C66C00A0CF54 /* main.m */; };
+		FAFD3DCF1E44C66C00A0CF54 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFD3DCE1E44C66C00A0CF54 /* AppDelegate.m */; };
+		FAFD3DD21E44C66C00A0CF54 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFD3DD11E44C66C00A0CF54 /* ViewController.m */; };
+		FAFD3DD51E44C66C00A0CF54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAFD3DD31E44C66C00A0CF54 /* Main.storyboard */; };
+		FAFD3DD71E44C66C00A0CF54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAFD3DD61E44C66C00A0CF54 /* Assets.xcassets */; };
+		FAFD3DDA1E44C66C00A0CF54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAFD3DD81E44C66C00A0CF54 /* LaunchScreen.storyboard */; };
+		FAFD3DEF1E487B8F00A0CF54 /* FastFedExTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFD3DEE1E487B8F00A0CF54 /* FastFedExTests.m */; };
+		FAFD3DFF1E48914300A0CF54 /* Strings_Env_PROD.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAFD3DFD1E48914300A0CF54 /* Strings_Env_PROD.plist */; };
+		FAFD3E001E48914300A0CF54 /* Strings_Env_QA.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAFD3DFE1E48914300A0CF54 /* Strings_Env_QA.plist */; };
+		FAFD3E261E48AFAC00A0CF54 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAFD3E241E48AFAC00A0CF54 /* Fabric.framework */; };
+		FAFD3E271E48AFAC00A0CF54 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAFD3E251E48AFAC00A0CF54 /* Crashlytics.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FAFD3DF11E487B8F00A0CF54 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAFD3DBF1E44C66B00A0CF54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAFD3DC61E44C66B00A0CF54;
+			remoteInfo = FastFedEx;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FAFD3DC71E44C66B00A0CF54 /* FedExFast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FedExFast.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAFD3DCB1E44C66C00A0CF54 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FAFD3DCD1E44C66C00A0CF54 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FAFD3DCE1E44C66C00A0CF54 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FAFD3DD01E44C66C00A0CF54 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FAFD3DD11E44C66C00A0CF54 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FAFD3DD41E44C66C00A0CF54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FAFD3DD61E44C66C00A0CF54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FAFD3DD91E44C66C00A0CF54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FAFD3DDB1E44C66C00A0CF54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAFD3DEC1E487B8E00A0CF54 /* FastFedExTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FastFedExTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAFD3DEE1E487B8F00A0CF54 /* FastFedExTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FastFedExTests.m; sourceTree = "<group>"; };
+		FAFD3DF01E487B8F00A0CF54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAFD3DFD1E48914300A0CF54 /* Strings_Env_PROD.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Strings_Env_PROD.plist; path = Configuration/Strings_Env_PROD.plist; sourceTree = "<group>"; };
+		FAFD3DFE1E48914300A0CF54 /* Strings_Env_QA.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Strings_Env_QA.plist; path = Configuration/Strings_Env_QA.plist; sourceTree = "<group>"; };
+		FAFD3E111E48A32300A0CF54 /* FastFedEx copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "FastFedEx copy-Info.plist"; path = "/Users/syntel/Documents/Niraj/FastFedEx/FastFedEx copy-Info.plist"; sourceTree = "<absolute>"; };
+		FAFD3E241E48AFAC00A0CF54 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		FAFD3E251E48AFAC00A0CF54 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FAFD3DC41E44C66B00A0CF54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAFD3E271E48AFAC00A0CF54 /* Crashlytics.framework in Frameworks */,
+				FAFD3E261E48AFAC00A0CF54 /* Fabric.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAFD3DE91E487B8E00A0CF54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FAFD3DBE1E44C66B00A0CF54 = {
+			isa = PBXGroup;
+			children = (
+				FAFD3E241E48AFAC00A0CF54 /* Fabric.framework */,
+				FAFD3E251E48AFAC00A0CF54 /* Crashlytics.framework */,
+				FAFD3DC91E44C66B00A0CF54 /* FastFedEx */,
+				FAFD3DED1E487B8E00A0CF54 /* FastFedExTests */,
+				FAFD3DC81E44C66B00A0CF54 /* Products */,
+				FAFD3E111E48A32300A0CF54 /* FastFedEx copy-Info.plist */,
+			);
+			sourceTree = "<group>";
+		};
+		FAFD3DC81E44C66B00A0CF54 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FAFD3DC71E44C66B00A0CF54 /* FedExFast.app */,
+				FAFD3DEC1E487B8E00A0CF54 /* FastFedExTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FAFD3DC91E44C66B00A0CF54 /* FastFedEx */ = {
+			isa = PBXGroup;
+			children = (
+				FAFD3DF51E488B2B00A0CF54 /* Configuration */,
+				FAFD3DCD1E44C66C00A0CF54 /* AppDelegate.h */,
+				FAFD3DCE1E44C66C00A0CF54 /* AppDelegate.m */,
+				FAFD3DD01E44C66C00A0CF54 /* ViewController.h */,
+				FAFD3DD11E44C66C00A0CF54 /* ViewController.m */,
+				FAFD3DD31E44C66C00A0CF54 /* Main.storyboard */,
+				FAFD3DD61E44C66C00A0CF54 /* Assets.xcassets */,
+				FAFD3DD81E44C66C00A0CF54 /* LaunchScreen.storyboard */,
+				FAFD3DDB1E44C66C00A0CF54 /* Info.plist */,
+				FAFD3DCA1E44C66C00A0CF54 /* Supporting Files */,
+			);
+			path = FastFedEx;
+			sourceTree = "<group>";
+		};
+		FAFD3DCA1E44C66C00A0CF54 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FAFD3DCB1E44C66C00A0CF54 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FAFD3DED1E487B8E00A0CF54 /* FastFedExTests */ = {
+			isa = PBXGroup;
+			children = (
+				FAFD3DEE1E487B8F00A0CF54 /* FastFedExTests.m */,
+				FAFD3DF01E487B8F00A0CF54 /* Info.plist */,
+			);
+			path = FastFedExTests;
+			sourceTree = "<group>";
+		};
+		FAFD3DF51E488B2B00A0CF54 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				FAFD3DFD1E48914300A0CF54 /* Strings_Env_PROD.plist */,
+				FAFD3DFE1E48914300A0CF54 /* Strings_Env_QA.plist */,
+			);
+			name = Configuration;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FAFD3DC61E44C66B00A0CF54 /* FedExFast */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAFD3DDE1E44C66C00A0CF54 /* Build configuration list for PBXNativeTarget "FedExFast" */;
+			buildPhases = (
+				FAFD3DC31E44C66B00A0CF54 /* Sources */,
+				FAFD3DC41E44C66B00A0CF54 /* Frameworks */,
+				FAFD3DC51E44C66B00A0CF54 /* Resources */,
+				FAFD3E231E48AEC000A0CF54 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FedExFast;
+			productName = FastFedEx;
+			productReference = FAFD3DC71E44C66B00A0CF54 /* FedExFast.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FAFD3DEB1E487B8E00A0CF54 /* FastFedExTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAFD3DF31E487B8F00A0CF54 /* Build configuration list for PBXNativeTarget "FastFedExTests" */;
+			buildPhases = (
+				FAFD3DE81E487B8E00A0CF54 /* Sources */,
+				FAFD3DE91E487B8E00A0CF54 /* Frameworks */,
+				FAFD3DEA1E487B8E00A0CF54 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FAFD3DF21E487B8F00A0CF54 /* PBXTargetDependency */,
+			);
+			name = FastFedExTests;
+			productName = FastFedExTests;
+			productReference = FAFD3DEC1E487B8E00A0CF54 /* FastFedExTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FAFD3DBF1E44C66B00A0CF54 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = Syntel;
+				TargetAttributes = {
+					FAFD3DC61E44C66B00A0CF54 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = SARSE24G85;
+						ProvisioningStyle = Manual;
+					};
+					FAFD3DEB1E487B8E00A0CF54 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = K4X549P46W;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FAFD3DC61E44C66B00A0CF54;
+					};
+				};
+			};
+			buildConfigurationList = FAFD3DC21E44C66B00A0CF54 /* Build configuration list for PBXProject "FastFedEx" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FAFD3DBE1E44C66B00A0CF54;
+			productRefGroup = FAFD3DC81E44C66B00A0CF54 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FAFD3DC61E44C66B00A0CF54 /* FedExFast */,
+				FAFD3DEB1E487B8E00A0CF54 /* FastFedExTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FAFD3DC51E44C66B00A0CF54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAFD3DDA1E44C66C00A0CF54 /* LaunchScreen.storyboard in Resources */,
+				FAFD3DD71E44C66C00A0CF54 /* Assets.xcassets in Resources */,
+				FAFD3E001E48914300A0CF54 /* Strings_Env_QA.plist in Resources */,
+				FAFD3DFF1E48914300A0CF54 /* Strings_Env_PROD.plist in Resources */,
+				FAFD3DD51E44C66C00A0CF54 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAFD3DEA1E487B8E00A0CF54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FAFD3E231E48AEC000A0CF54 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run e5151d636f965b3d6b941585c9a8f7cf96242df6 05a33bcb37febd1880108fa2f7eaa1809cbaf68b41d5a6904899e0cdd7789bc8";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FAFD3DC31E44C66B00A0CF54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAFD3DD21E44C66C00A0CF54 /* ViewController.m in Sources */,
+				FAFD3DCF1E44C66C00A0CF54 /* AppDelegate.m in Sources */,
+				FAFD3DCC1E44C66C00A0CF54 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAFD3DE81E487B8E00A0CF54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAFD3DEF1E487B8F00A0CF54 /* FastFedExTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FAFD3DF21E487B8F00A0CF54 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAFD3DC61E44C66B00A0CF54 /* FedExFast */;
+			targetProxy = FAFD3DF11E487B8F00A0CF54 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FAFD3DD31E44C66C00A0CF54 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAFD3DD41E44C66C00A0CF54 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FAFD3DD81E44C66C00A0CF54 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAFD3DD91E44C66C00A0CF54 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FAFD3DDD1E44C66C00A0CF54 /* PROD */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Mangesh Bhavsar (6N8GJ99Z82)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mangesh Bhavsar (6N8GJ99Z82)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = K4X549P46W;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "80ae72d4-db8e-439d-896c-6202cf9537b9";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = PROD;
+		};
+		FAFD3DE01E44C66C00A0CF54 /* PROD */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Mangesh Bhavsar (6N8GJ99Z82)";
+				DEVELOPMENT_TEAM = SARSE24G85;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = FastFedEx/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fedex.mobile.home;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "80ae72d4-db8e-439d-896c-6202cf9537b9";
+			};
+			name = PROD;
+		};
+		FAFD3DF41E487B8F00A0CF54 /* PROD */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = FastFedExTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = syntel.FastFedExTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FastFedEx.app/FastFedEx";
+			};
+			name = PROD;
+		};
+		FAFD3DFA1E488E7100A0CF54 /* QA */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Mangesh Bhavsar (6N8GJ99Z82)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mangesh Bhavsar (6N8GJ99Z82)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = K4X549P46W;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "80ae72d4-db8e-439d-896c-6202cf9537b9";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = QA;
+		};
+		FAFD3DFB1E488E7100A0CF54 /* QA */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Mangesh Bhavsar (6N8GJ99Z82)";
+				DEVELOPMENT_TEAM = SARSE24G85;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = FastFedEx/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fedex.mobile.home;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "80ae72d4-db8e-439d-896c-6202cf9537b9";
+			};
+			name = QA;
+		};
+		FAFD3DFC1E488E7100A0CF54 /* QA */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = FastFedExTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = syntel.FastFedExTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FastFedEx.app/FastFedEx";
+			};
+			name = QA;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FAFD3DC21E44C66B00A0CF54 /* Build configuration list for PBXProject "FastFedEx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAFD3DDD1E44C66C00A0CF54 /* PROD */,
+				FAFD3DFA1E488E7100A0CF54 /* QA */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = PROD;
+		};
+		FAFD3DDE1E44C66C00A0CF54 /* Build configuration list for PBXNativeTarget "FedExFast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAFD3DE01E44C66C00A0CF54 /* PROD */,
+				FAFD3DFB1E488E7100A0CF54 /* QA */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = PROD;
+		};
+		FAFD3DF31E487B8F00A0CF54 /* Build configuration list for PBXNativeTarget "FastFedExTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAFD3DF41E487B8F00A0CF54 /* PROD */,
+				FAFD3DFC1E488E7100A0CF54 /* QA */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = PROD;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FAFD3DBF1E44C66B00A0CF54 /* Project object */;
+}

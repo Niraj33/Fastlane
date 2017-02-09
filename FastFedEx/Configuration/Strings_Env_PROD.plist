@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   String_Env_PROD.plist
+   FastFedEx
+
+   Created by Syntel on 2/6/17.
+   Copyright (c) 2017 Syntel. All rights reserved.
+-->
+<plist version="1.0">
+    <dict>
+        <key>HOCKEY_API_TOKEN</key>
+        <string>d89f76b741df4c29be03e8700ca333f8</string>
+    </dict>
+</plist>
