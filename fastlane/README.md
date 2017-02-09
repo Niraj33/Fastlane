@@ -5,12 +5,26 @@ fastlane documentation
 sudo gem install fastlane
 ```
 # Available Actions
-## iOS
-### ios test
+### ALL
 ```
-fastlane ios test
+fastlane ALL
 ```
-Runs all the tests
+Will build all active schemes
+### QA
+```
+fastlane QA
+```
+Create QA IPA
+### PROD
+```
+fastlane PROD
+```
+Create PROD IPA
+### QA_IPA
+```
+fastlane QA_IPA
+```
+Create QA IPA only
 
 ----
 
