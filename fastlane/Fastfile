@@ -29,6 +29,13 @@ end
 
 desc "Create QA IPA"
 lane :QA do
+
+       update_project_provisioning(
+        xcodeproj: 'FastFedEx.xcodeproj',
+        profile: './fastlane/QA.mobileprovision',
+        target_filter: '.*',
+        build_configuration: '.*'
+    )
 	build(
 		scheme: 'QA', 
       	filename_prefix: 'FastFedEx',
@@ -85,6 +92,7 @@ private_lane :build do |options|
 	HOCKEY_API_TOKEN = get_info_plist_value(path: PLIST_PATH, key: 'HOCKEY_API_TOKEN')
 
 	BUILD_SERVER_URL = sh('hostname')
+
 	
 
 	puts '-----------------------------------'
@@ -109,6 +117,13 @@ private_lane :build do |options|
 	puts '-----------------------------------'
 	puts '--- G Y M  -  I P A  &  D S Y M ---'
 	puts '-----------------------------------'
+
+       update_project_provisioning(
+        xcodeproj: 'FastFedEx.xcodeproj',
+        profile: './fastlane/QA.mobileprovision',
+        target_filter: '.*',
+        build_configuration: '.*'
+    )
 
 	gym(
 	    scheme: XCODE_SCHEME,
