@@ -120,7 +120,7 @@ private_lane :build do |options|
 		include_bitcode: false,
 		output_directory: "./build",
 		output_name: XCODE_IPA_NAME,
-		#provisioning_profile_path: XCODE_PROVISIONING_PROFILE_PATH,
+		provisioning_profile_path: XCODE_PROVISIONING_PROFILE_PATH,
 		#codesigning_identity: XCODE_SIGN_ID,
 		#export_team_id: XCODE_TEAM_ID
 	)
