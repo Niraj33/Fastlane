@@ -1,20 +1,193 @@
-# Define the minimal Fastlane version
-fastlane_version "1.41.1"
+# Customise this file, documentation can be found here:
+# https://github.com/KrauseFx/fastlane/tree/master/docs
+# All available actions: https://github.com/KrauseFx/fastlane/blob/master/docs/Actions.md
+# can also be listed using the `fastlane actions` command
 
-# Use the iOS platform as default
-default_platform :ios
+# Change the syntax highlighting to Ruby
+# All lines starting with a # are ignored when running `fastlane`
 
-# Define what to do for the iOS platform
-platform :ios do
+# By default, fastlane will send which actions are used
+# No personal data is shared, more information on https://github.com/fastlane/enhancer
+# Uncomment the following line to opt out
+#opt_out_usage
 
- before_all do
-    gym(scheme: “FastFedEx”,use_legacy_build_api: true)
-  end
+# If you want to automatically update fastlane if a new version is available:
+update_fastlane
 
-   desc "Runs all the tests"
-  lane :test do
-    
-  end
+# This is the minimum version number required.
+# Update this, if you use features of a newer version
+fastlane_version "1.33.6"
 
 
+###########################################################################
+desc "Will build all active schemes"
+lane :ALL do
+	QA()
+	PROD()
 end
+
+
+desc "Create QA IPA"
+lane :QA do
+	build(
+		scheme: 'QA', 
+      	filename_prefix: 'FastFedEx',
+      	config_plist_path: './FastFedEx/Configuration/Strings_Env_QA.plist',
+    )
+end
+
+desc "Create PROD IPA"
+lane :PROD do
+	build(
+		scheme: 'PROD', 
+      	filename_prefix: 'FastFedEx',
+      	config_plist_path: './FastFedEx/Configuration/Strings_Env_PROD.plist',
+    )
+end
+
+desc "Create QA IPA only"
+lane :QA_IPA do
+	build_just_ipa(
+		scheme: 'QA', 
+      	filename_prefix: 'FastFedEx',
+      	config_plist_path: './FastFedEx/Configuration/Strings_Env_QA.plist'
+    )
+end
+###############################################################################
+
+
+desc "Create Lane to perform the build commands"
+private_lane :build do |options|
+
+	XCODE_SCHEME = options[:scheme]
+	IPA_PREFIX = options[:filename_prefix]
+	PLIST_PATH = options[:config_plist_path]
+		
+	puts '-----------------------------------'
+	puts '- P A S S E D   V A R I A B L E S -'
+	puts '-----------------------------------'
+	puts 'XCODE_SCHEME=' + XCODE_SCHEME
+	puts 'PLIST_PATH=' + PLIST_PATH
+	puts 'IPA_PREFIX=' + IPA_PREFIX
+	puts '-----------------------------------'	
+	
+	
+    XCODE_TEAM_ID = 'Z7KK6K4Z85'
+    XCODE_SIGN_ID = 'iPhone Distribution: The Home Depot, Inc.'
+    XCODE_PROVISIONING_PROFILE_PATH = './fastlane/' + XCODE_SCHEME  + '.mobileprovision'
+    
+    puts 'XCODE_PROVISIONING_PROFILE_PATH=' + XCODE_PROVISIONING_PROFILE_PATH
+	puts '-----------------------------------'
+	VERSION_NUMBER =  2
+	BUILD_NUMBER = 2
+	XCODE_IPA_NAME = IPA_PREFIX + '_'	+ XCODE_SCHEME + '_' + VERSION_NUMBER.to_s + '_' + BUILD_NUMBER.to_s
+
+	HOCKEY_API_TOKEN = get_info_plist_value(path: PLIST_PATH, key: 'HOCKEY_API_TOKEN')
+
+	BUILD_SERVER_URL = sh('hostname')
+	
+
+	puts '-----------------------------------'
+	puts '--- R E A D   V A R I A B L E S ---'
+	puts '-----------------------------------'
+	puts 'XCODE_SCHEME=' + XCODE_SCHEME	
+	puts 'PLIST_PATH=' + PLIST_PATH
+	puts 'IPA_PREFIX=' + IPA_PREFIX
+	puts 'XCODE_IPA_NAME=' + XCODE_IPA_NAME
+	puts 'XCODE_PROVISIONING_PROFILE_PATH=' + XCODE_PROVISIONING_PROFILE_PATH
+	puts 'XCODE_TEAM_ID=' + XCODE_TEAM_ID
+	puts 'XCODE_SIGN_ID=' + XCODE_SIGN_ID
+	
+	puts 'VERSION_NUMBER=' + VERSION_NUMBER.to_s
+	puts 'BUILD_NUMBER=' + BUILD_NUMBER.to_s
+
+	puts 'HOCKEY_API_TOKEN=' + HOCKEY_API_TOKEN
+
+	puts 'BUILD_SERVER_URL=' + BUILD_SERVER_URL
+	puts '-----------------------------------'
+	
+	puts '-----------------------------------'
+	puts '--- G Y M  -  I P A  &  D S Y M ---'
+	puts '-----------------------------------'
+
+	gym(
+	    scheme: XCODE_SCHEME,
+	    # both of these flags are required for ad hoc
+	    export_method: 'enterprise',
+	    use_legacy_build_api: true,
+	    sdk: "iphoneos",
+		clean: true,
+		include_bitcode: false,
+		output_directory: "./build",
+		output_name: XCODE_IPA_NAME,
+		provisioning_profile_path: XCODE_PROVISIONING_PROFILE_PATH,
+		#codesigning_identity: XCODE_SIGN_ID,
+		#export_team_id: XCODE_TEAM_ID
+	)
+
+
+        puts '-----------------------------------'
+	puts '---- R E L E A S E   N O T E S ----'
+	puts '-----------------------------------'	
+	puts 'autogenerate release notes from git commits'
+       tag_name = `git describe --tags --abbrev=0`
+	tag_name.delete!("\n")
+	release_notes = changelog_from_git_commits(
+		include_merges: false,
+               between: [tag_name, 'HEAD'],
+		pretty: '**%h:** %s<br/>',
+	)
+	puts 'release_notes=' + release_notes
+
+	
+	puts '-----------------------------------'
+	puts '----------- H O C K E Y -----------'
+	puts '-----------------------------------'	
+
+	if HOCKEY_API_TOKEN== '' 
+   		puts "api token is empty, skip hockey"
+	else
+   		puts "push to hockey"
+   		markdown_type = '1'
+		hockey(
+			api_token: HOCKEY_API_TOKEN,
+    		
+    		#notes_type: markdown_type,
+  
+    		#notify: HOCKEY_NOTIFY, # Notify all testers that can install this app
+    		#status: HOCKEY_STATUS, # Available for download or installation
+       		build_server_url: BUILD_SERVER_URL,#optional, set to the URL of the build job on your build server
+  		)
+	end	
+
+       puts '-----------------------------------'
+	puts '----------- Crashlytics -----------'
+	puts '-----------------------------------'	
+
+       crashlytics(api_token: "e5151d636f965b3d6b941585c9a8f7cf96242df6",
+              build_secret: "05a33bcb37febd1880108fa2f7eaa1809cbaf68b41d5a6904899e0cdd7789bc8")
+	
+	
+end
+
+desc "after_all - This lane is called, only if the executed lane was successful"
+after_all do |lane|
+
+	puts '-----------------------------------'
+	puts '-C L E A N U P   A R T I F A C T S-'
+	puts '-----------------------------------'
+	
+	#File.delete('../../' + XCODE_IPA_NAME + '.ipa')
+    #File.delete('../../' + XCODE_IPA_NAME + '.app.dSYM.zip')
+
+	notification(message: "Fastlane finished '#{lane}' successfully") # Mac OS X Notification
+end
+
+desc "Lane error handling"
+error do |lane, exception|
+    notification(message: "Fastlane '#{lane}' errored, #{exception}") # Mac OS X Notification
+end 
+
+
+# More information about multiple platforms in fastlane:
+# https://github.com/KrauseFx/fastlane/blob/master/docs/Platforms.md
