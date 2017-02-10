@@ -106,7 +106,24 @@ private_lane :build do |options|
 	puts 'BUILD_SERVER_URL=' + BUILD_SERVER_URL
 	puts '-----------------------------------'
 	
-	
+	puts '-----------------------------------'
+	puts '--- G Y M  -  I P A  &  D S Y M ---'
+	puts '-----------------------------------'
+
+	gym(
+	    scheme: XCODE_SCHEME,
+	    # both of these flags are required for ad hoc
+	    export_method: 'enterprise',
+	    use_legacy_build_api: true,
+	    sdk: "iphoneos",
+		clean: true,
+		include_bitcode: false,
+		output_directory: "./build",
+		output_name: XCODE_IPA_NAME,
+		provisioning_profile_path: XCODE_PROVISIONING_PROFILE_PATH,
+		#codesigning_identity: XCODE_SIGN_ID,
+		#export_team_id: XCODE_TEAM_ID
+	)
 
 
         puts '-----------------------------------'
